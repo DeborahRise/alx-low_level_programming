@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints single  digits with ,
+ * main - prints single  digits with combo
  * Return: 0
  */
 int main(void)
