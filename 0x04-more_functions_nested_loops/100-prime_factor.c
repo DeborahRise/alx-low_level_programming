@@ -8,7 +8,7 @@
 int main(void)
 {
 	unsigned long n = 612852475143;
-	unsigned int i;
+	unsigned long i;
 
 	for (i = 2; i <= n; i++)
 	{
@@ -16,7 +16,7 @@ int main(void)
 		{
 			if (n == i)
 			{
-				printf("%lu is the largest prime factor\n", n);
+				printf("%lu\n", i);
 			}
 			n = (n / i);
 		}
