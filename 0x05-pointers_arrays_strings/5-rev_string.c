@@ -17,6 +17,6 @@ void rev_string(char *s)
 	{
 		printf("%c", s[y]);
 
-		y++;
+		y--;
 	}
 }
