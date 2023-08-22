@@ -10,43 +10,38 @@
 
 int _atoi(char *s)
 {
-	/* Initialize sign as positive*/
-	int sign = 1;
-	int result = 0;
-	int i = 0;
-	/* Calculate the length of the string */
-	int length = strlen(s);
+	int w, x, y, length, z, digit;
 
-	while (i < length && s[i] == ' ')
-	i++;
+	w = 0;
+	x = 0;
+	y = 0;
+	length = 0;
+	z = 0;
+	digit = 0;
 
-	if (i < length && s[i] == '-')
-	{
-	sign = -1;
-	i++;
-	}
-	else if (i < length && s[i] == '+')
-	{
-	i++;
-	}
+	while (s[length] != '\0')
+		length++;
 
-	while (i < length && s[i] >= '0' && s[i] <= '9')
+	while (w < length && z == 0)
 	{
-	/* Convert the character to a digit */
-	int digit = s[i] - '0';
+		if (s[w] == '-')
+			++x;
 
-	/* Check for overflow */
-	if (result > (INT_MAX - digit) / 10)
-	{
-		if (sign == 1)
-		return (INT_MAX);
-		else
-		return (INT_MIN);
+		if (s[w] >= '0' && s[w] <= '9')
+		{
+			digit = s[w] - '0';
+			if (x % 2)
+				digit = -digit;
+			y = y * 10 + digit;
+			z = 1;
+			if (s[w + 1] < '0' || s[w + 1] > '9')
+				break;
+			z = 0;
+		}
+		w++;
 	}
 
-	result = result * 10 + digit;
-	i++;
-	}
-
-	return (result * sign);
+	if (z == 0)
+		return (0);
+	return (y);
 }
