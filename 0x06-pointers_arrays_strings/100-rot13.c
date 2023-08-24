@@ -14,7 +14,7 @@ char *rot13(char *s)
 	int length = strlen(s);
 	int i, j;
 
-	for (i = 0; i <= length; i++)
+	for (i = 0; i < length; i++)
 	{
 		for (j = 0; alpha[j] != '\0'; j++)
 		{
