@@ -9,10 +9,10 @@
 
 void print_number(int n)
 {
-	unsigned int i = n;
-	unsigned int a;
-	unsigned int count = 1;
-	unsigned int x = n;
+	int i = n;
+	int a;
+	int count = 1;
+	int x = n;
 
 	if (n < 0)
 	{
