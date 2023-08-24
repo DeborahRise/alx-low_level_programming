@@ -1,0 +1,33 @@
+#include "main.h"
+#include <string.h>
+#include <ctype.h>
+
+/**
+ * *cap_string - capitalizes all words
+ * @s: referenced array
+ * Return: 0
+ */
+
+char *cap_string(char *s)
+{
+	char sC[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 0};
+	int length = strlen(s);
+	int i;
+	int j;
+
+	for (i = 0; i < length; i++)
+	{
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = s[i] - ('A' - 'a');
+		}
+		for (j = 0; j != '\0'; j++)
+		{
+			if (s[i] == sC[j] && islower(s[i + 1]))
+			{
+				s[i + 1] = s[i + 1] - ('A' - 'a');
+			}
+		}
+	}
+	return (s);
+}
