@@ -2,10 +2,9 @@
 #include <stdio.h>
 
 /**
- * reverse_array - reverses the content of an
- * array of integers
+ * reverse_array - reverses an integer array
  * @a: array reference
- * @n: size of array
+ * @n: number of elements
  * Return: 0
  */
 
@@ -23,5 +22,4 @@ void reverse_array(int *a, int n)
 
 		k = k + 1;
 	}
-
 }
