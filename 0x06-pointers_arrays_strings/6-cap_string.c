@@ -10,11 +10,10 @@
 char *cap_string(char *s)
 {
 	char sC[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125, '\0'};
-	int length = strlen(s);
 	int i;
 	int j;
 
-	for (i = 0; i < length; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
 		{
