@@ -9,12 +9,11 @@
 
 char *rot13(char *s)
 {
-	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int length = strlen(s);
+	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int i, j;
 
-	for (i = 0; i < length; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; alpha[j] != '\0'; j++)
 		{
