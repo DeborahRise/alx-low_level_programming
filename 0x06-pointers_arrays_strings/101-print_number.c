@@ -8,33 +8,19 @@
 
 void print_number(int n)
 {
-	unsigned int a;
-	unsigned int count = 1;
-	unsigned int x = n;
+	unsigned int x;
+
+	x = n;
 
 	if (n < 0)
 	{
-		x = -n;
-		n = -n;
 		_putchar('-');
+		x = -n;
 	}
-	while (n > 9)
+
+	if (x / 10 != 0)
 	{
-		if (n >= 0 && n < 10)
-		{
-			_putchar(n + '0');
-		}
-		else
-		{
-			n = (n / 10);
-			count = count * 10;
-		}
+		print_number(x / 10);
 	}
-	while (count >= 1)
-	{
-		a = ((x / count) % 10);
-		_putchar(a + '0');
-		count = count / 10;
-	}
-	_putchar('\n');
+	_putchar((x % 10) + '0');
 }
