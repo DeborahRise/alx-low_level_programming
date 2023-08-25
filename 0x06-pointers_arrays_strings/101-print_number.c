@@ -8,9 +8,9 @@
 
 void print_number(int n)
 {
-	int a;
-	int count = 1;
-	int x = n;
+	unsigned int a;
+	unsigned int count = 1;
+	unsigned int x = n;
 
 	if (n < 0)
 	{
