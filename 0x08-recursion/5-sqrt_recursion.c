@@ -2,11 +2,13 @@
 
 /**
  * help_sqrt_recursion - helper function
- * _sqrt_recursion - function natural square root of a number
  * @n: number passed
  * @i: square root check
- * Return: 0
+ * Return: square root or -1.
  */
+
+int help_sqrt_recursion(int n, int i);
+int _sqrt_recursion(int n);
 
 int help_sqrt_recursion(int n, int i)
 {
@@ -18,11 +20,14 @@ int help_sqrt_recursion(int n, int i)
 	{
 	return (i);
 	}
-	if (i * i > n)
-	{
-	return (-1);
-	}
+
+return (-1);
 }
+/**
+ * _sqrt_recursion - function natural square root of a number
+ * @n: number given
+ * Return: square root or -1
+ */
 
 int _sqrt_recursion(int n)
 {
