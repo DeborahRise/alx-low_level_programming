@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
 	}
 	money = atoi(argv[1]);
 	if (money < 0)
+	printf("0\n");
+	else
 	{
-		printf("0\n");
-	}
 	if (money >= 25)
 	{
 		coins = coins + (money / 25);
@@ -48,5 +48,6 @@ int main(int argc, char *argv[])
 		coins = coins + 1;
 	}
 	printf("%d\n", coins);
+	}
 return  (0);
 }
