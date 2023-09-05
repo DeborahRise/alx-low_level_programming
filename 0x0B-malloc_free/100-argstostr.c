@@ -39,5 +39,4 @@ k++;
 }
 ptr[k] = '\0';
 return (ptr);
-free(ptr);
 }
