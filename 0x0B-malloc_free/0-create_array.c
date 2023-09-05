@@ -32,4 +32,5 @@ char *create_array(unsigned int size, char c)
 	}
 	ptrC[i] = '\0';
 	return (ptrC);
+	free(ptrC);
 }
