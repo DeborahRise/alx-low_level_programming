@@ -44,4 +44,9 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (two_d);
+	for (i = 0; i < height; i++)
+	{
+		free(two_d[i]);
+	}
+	free(two_d);
 }
