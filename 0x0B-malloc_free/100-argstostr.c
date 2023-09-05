@@ -24,7 +24,6 @@ size = size + strlen(av[i]);
 ptr = (char *) malloc(size *sizeof(char) + 1);
 if (ptr == NULL)
 {
-free(ptr);
 return (NULL);
 }
 for (i = 0; i < ac; i++)
