@@ -30,6 +30,5 @@ char *_strdup(char *str)
 	{
 		ptrC = strdup(str);
 		return (ptrC);
-		free(ptrC);
 	}
 }
