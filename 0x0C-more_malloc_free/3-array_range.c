@@ -13,18 +13,16 @@ int *array_range(int min, int max)
 	int i, range;
 
 	if (min > max)
-	{
 		return (NULL);
-	}
 	/*value of range from min to max*/
 	range = (max - min) + 1;
 	y = malloc(range * sizeof(int));
-	if (!y)
+	if (y == NULL)
 	{
 		free(y);
 		return (NULL);
 	}
-	for (i = 0; i <= max; i++)
+	for (i = 0; min <= max; i++)
 	{
 		y[i] = min;
 		min++;
