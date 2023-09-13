@@ -3,26 +3,6 @@
 #include <stdlib.h>
 
 /**
- * funct - a function that prints a name.
- * @a: array passed
- * Return: Nothing
- */
-
-void funct(char *a)
-{
-	int i;
-	int len = sizeof(a);
-
-	if (len != 0)
-	{
-		for (i = 0; i < len; i++)
-		{
-			_putchar(a[i]);
-		}
-	}
-}
-
-/**
  * print_name - a function that prints a name.
  * @name: name passed
  * @f: name of pointer to  function
@@ -31,7 +11,10 @@ void funct(char *a)
 
 void print_name(char *name, void (*f)(char *))
 {
-	f = funct;
+	if (name == NULL || f == NULL)
+	{
+		return;
+	}
 
-	(*f)(name);
+	(f)(name);
 }
