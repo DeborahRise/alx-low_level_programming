@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	unsigned char (*maincode) = (unsigned char *)main;
+	unsigned char *(maincode) = (unsigned char *)main;
 	int num, i;
 
 	num = atoi(argv[1]);
