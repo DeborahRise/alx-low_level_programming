@@ -30,9 +30,9 @@ int main(int argc, char **argv)
 	{
 		printf("%02x", maincode[i]);
 		if (i < num - 1)
-			printf(" ");
+			putchar(' ');
 	}
-	printf("\n");
+	putchar('\n');
 
 
 	return (0);
