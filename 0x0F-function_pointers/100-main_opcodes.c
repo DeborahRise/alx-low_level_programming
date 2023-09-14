@@ -26,11 +26,13 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 
-	for (i = 0; i < num - 1; i++)
+	for (i = 0; i < num; i++)
 	{
-		printf("%02x ", maincode[i]);
+		printf("%02x", maincode[i]);
+		if (i < num - 1)
+			printf(" ");
 	}
-	printf("%02x\n", maincode[i]);
+	printf("\n");
 
 
 	return (0);
