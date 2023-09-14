@@ -13,6 +13,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	va_start(print, n);
+	if (*seperator == NULL || n == 0)
+	{
+		return;
+	}
 
 	for (i = 0; i < n - 1; i++)
 	{
