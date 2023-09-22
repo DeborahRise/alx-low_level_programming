@@ -22,6 +22,5 @@ void free_list(list_t *head)
 	}
 	free(transverse->str);
 	free(transverse);
-	free(head);
 
 }
