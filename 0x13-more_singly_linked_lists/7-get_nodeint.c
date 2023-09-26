@@ -21,7 +21,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	temp = head;
 
 	i = 0;
-	while (i < index && temp->next != NULL)
+	while (i < index && temp != NULL)
 	{
 		temp = temp->next;
 		i++;
