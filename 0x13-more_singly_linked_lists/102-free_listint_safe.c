@@ -15,10 +15,10 @@ size_t free_listint_safe(listint_t **h)
 
 	while (boss != NULL)
 	{
-		record++;
 		staff = boss;
 		boss = boss->next;
 		free(staff);
+		record++;
 
 		if (staff < boss)
 			break;
