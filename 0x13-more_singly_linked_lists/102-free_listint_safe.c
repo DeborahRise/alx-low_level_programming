@@ -10,7 +10,7 @@ size_t free_listint_safe(listint_t **h)
 	size_t record = 0;
 	listint_t *staff, *boss = *h;
 
-	if (!h || !(*h))
+	if (h == NULL)
 		return (0);
 
 	while (boss)
