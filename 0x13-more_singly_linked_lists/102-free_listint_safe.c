@@ -20,7 +20,7 @@ size_t free_listint_safe(listint_t **h)
 		boss = boss->next;
 		free(staff);
 
-		if (staff < boss)
+		if (staff > boss)
 			break;
 	}
 	*h = NULL;
