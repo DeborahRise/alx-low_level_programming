@@ -10,7 +10,7 @@ size_t free_listint_safe(listint_t **h)
 	size_t record = 0;
 	listint_t *staff, *boss = *h;
 
-	if (h == NULL)
+	if (h == NULL || (*h) == NULL)
 		return (0);
 
 	while (boss)
@@ -20,9 +20,10 @@ size_t free_listint_safe(listint_t **h)
 		boss = boss->next;
 		free(staff);
 
-		if (staff > boss)
+		if (staff < boss)
 			break;
 	}
 	*h = NULL;
+	record++;
 	return (record);
 }
