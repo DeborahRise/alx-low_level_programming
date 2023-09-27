@@ -5,6 +5,8 @@
  * @head: A pointer to the head of the list
  * Return: The number of nodes in the list
  */
+
+size_t print_listint_safe(const listint_t *head);
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodes = 0;
@@ -49,5 +51,5 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 
-	return nodes;
+return (nodes);
 }
