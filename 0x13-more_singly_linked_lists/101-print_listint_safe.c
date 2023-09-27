@@ -6,42 +6,37 @@
  * Return: The number of nodes in the list
  */
 
-size_t print_listint_safe(const listint_t *head);
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes = 0;
-	const listint_t *slow_ptr = head;
-	const listint_t *fast_ptr = head;
+	const listint_t *tortoise;
+	const listint_t *hare;
+	size_t fan, reffree = 0;
 
-	if (!head)
-		exit(98);
-
-	while (fast_ptr && fast_ptr->next)
+	tortoise = head;
+	while (tortoise != NULL)
 	{
-		printf("[%p] %d\n", (void *)slow_ptr, slow_ptr->n);
-		nodes++;
-
-		slow_ptr = slow_ptr->next;
-		fast_ptr = fast_ptr->next->next;
-
-		if (slow_ptr == fast_ptr)
+		if (!head)
 		{
-			printf("[%p] %d\n", (void *)slow_ptr, slow_ptr->n);
-			printf("[%p] %d\n", (void *)slow_ptr->next, slow_ptr->next->n);
-			printf("-> [%p] %d\n", (void *)fast_ptr->next->next,
-					fast_ptr->next->next->n);
-			nodes += 2;
-			return (nodes);
+			exit(98);
+		}
+
+		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
+		reffree++;
+
+		tortoise = tortoise->next;
+		hare = head;
+		fan = 0;
+		while (fan < reffree)
+		{
+
+			if (tortoise == hare)
+			{
+				printf("-> [%p] %d\n", (void *)tortoise, tortoise->n);
+				return (reffree);
+			}
+			hare = hare->next;
+			fan++;
 		}
 	}
-
-	while (slow_ptr)
-	{
-		printf("[%p] %d\n", (void *)slow_ptr, slow_ptr->n);
-		nodes++;
-		slow_ptr = slow_ptr->next;
-	}
-
-
-	return (nodes);
+	return (reffree);
 }
