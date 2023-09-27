@@ -28,6 +28,26 @@ size_t print_listint_safe(const listint_t *head)
 			break;
 		}
 	}
+	if (slow_ptr == fast_ptr)
+	{
+		slow_ptr = head;
+		while (slow_ptr != fast_ptr)
+		{
+			printf("[%p] %d\n", (void *)slow_ptr, slow_ptr->n);
+			nodes++;
+			slow_ptr = slow_ptr->next;
+			fast_ptr = fast_ptr->next;
+		}
+	}
+	else
+	{
+		while (slow_ptr)
+		{
+			printf("[%p] %d\n", (void *)slow_ptr, slow_ptr->n);
+			nodes++;
+			slow_ptr = slow_ptr->next;
+		}
+	}
 
-	return (nodes);
+	return nodes;
 }
