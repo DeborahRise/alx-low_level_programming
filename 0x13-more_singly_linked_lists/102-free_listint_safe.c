@@ -21,7 +21,13 @@ size_t free_listint_safe(listint_t **h)
 		free(staff);
 
 		if (staff < boss)
-			break;
+		{
+			free(*h);
+			*h = NULL;
+			record++;
+			return (record);
+		}
+
 	}
 	*h = NULL;
 	return (record);
