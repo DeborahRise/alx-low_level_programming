@@ -11,7 +11,9 @@ void help_print_binary(unsigned long int n)
 {
 	unsigned long int m;
 
-	if (n > 0)
+	if (n == 0)
+		return;
+	else
 	{
 		m = (n & 1);
 		print_binary(n >>= 1);
@@ -32,7 +34,7 @@ void print_binary(unsigned long int n)
 	{
 		_putchar('0');
 	}
-	if (n > 0)
+	else
 	{
 		help_print_binary(n);
 	}
