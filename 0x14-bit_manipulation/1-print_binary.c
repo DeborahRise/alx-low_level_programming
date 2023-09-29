@@ -13,12 +13,13 @@ void help_print_binary(unsigned long int n)
 
 	if (n == 0)
 		return;
-	else
+	if ((n >> 1) != 0)
 	{
 		m = (n & 1);
 		print_binary(n >>= 1);
 		_putchar(m + '0');
 	}
+	_putchar(n + '0');
 }
 
 /**
