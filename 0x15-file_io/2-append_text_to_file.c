@@ -11,7 +11,7 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	{
+
 		int file;
 		int final_out;
 		int x;
@@ -29,5 +29,5 @@ int append_text_to_file(const char *filename, char *text_content)
 		if (final_out == -1)
 			return (-1);
 		return (1);
-	}
+
 }
