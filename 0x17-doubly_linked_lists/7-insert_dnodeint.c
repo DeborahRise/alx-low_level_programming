@@ -4,7 +4,7 @@
  * insert_dnodeint_at_index - a function that inserts
  * a new node at a given position
  * @h: head of list
- * @idx: index of insertion
+ * @idx: index of insertion in list
  * @n: data of new node
  * Return: address of new node
  */
