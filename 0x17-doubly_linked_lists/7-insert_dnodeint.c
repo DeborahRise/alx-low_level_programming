@@ -5,7 +5,7 @@
  * a new node at a given position
  * @h: head of list
  * @idx: index of insertion in list
- * @n: data of new node
+ * @n: data of new node for insertion
  * Return: address of new node
  */
 
