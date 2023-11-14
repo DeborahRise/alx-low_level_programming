@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
-int jackpot(void)
+int rand(void)
 {
 	static int num[] = {8, 8, 7, 9, 23, 74};
 	static int i = 0;
