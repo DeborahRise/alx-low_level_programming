@@ -1,8 +1,8 @@
 int jackpot(void)
 {
-	static int num[] = {9, 8, 10, 24, 75, 9};
-	static int i = 0;
+	static int t[] = {8, 8, 7, 9, 23, 74};
+ static int i = 0;
 
-	i = i > 5 ? 0 : i;
-	return num[i++];
+ i = i > 5 ? 0 : i;
+ return t[i++];
 }
