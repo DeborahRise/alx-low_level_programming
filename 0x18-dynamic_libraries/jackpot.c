@@ -4,5 +4,5 @@ int jackpot(void)
 	static int i = 0;
 
 	i = i > 5 ? 0 : i;
-	return (num[i++]);
+	return num[i++];
 }
