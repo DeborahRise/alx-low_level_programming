@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 #include <stdlib.h>
 
-/*
+/**
  * hash_table_create - a function that creates a hash table
  * @size: The size of the HashTable
  * Return: a pointer to the hash table created
