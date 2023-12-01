@@ -28,15 +28,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	temp = ht->array[index];
 	while (temp)
 	{
-		if (strcmp(temp->key, new_item->key) == 0)
+		if (strcmp(temp->key, key) == 0)
 		{
 			free(temp->value);
 			temp->value = strdup(value);
-			new_item->next = temp->next;
-			temp->next = new_item;
+			new_item->next = temp;
 			free(new_item->key);
 			free(new_item->value);
-			free(new_item);
 		}
 		temp = temp->next;
 	}
