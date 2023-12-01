@@ -38,10 +38,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(temp->value);
 			temp->value = strdup(value);
-			new_item->next = temp;
+			new_item->next = temp->next;
 			free(new_item->key);
 			free(new_item->value);
 			free(new_item);
+			return (1);
 		}
 		temp = temp->next;
 	}
